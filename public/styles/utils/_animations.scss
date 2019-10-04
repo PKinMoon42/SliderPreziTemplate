@@ -1,0 +1,42 @@
+.fade-in {
+  opacity: 0;
+  transition: all .3s;
+
+  &.from-top {
+    transform: translateY(-20px);
+  }
+
+  &.from-bottom {
+    transform: translateY(20px);
+  }
+
+  &.from-left {
+    transform: translateX(-20px);
+  }
+  
+  &.from-right {
+    transform: translateX(20px);
+  }
+}
+
+.active {
+  .fade-in {
+    opacity: 1;
+  
+    &.from-top {
+      transform: translateY(0);
+    }
+  
+    &.from-bottom {
+      transform: translateY(0);
+    }
+
+    &.from-left {
+      transform: translateX(0);
+    }
+    
+    &.from-right {
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,202 @@
+.fade-in {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.fade-in.from-top {
+  transform: translateY(-20px);
+}
+.fade-in.from-bottom {
+  transform: translateY(20px);
+}
+.fade-in.from-left {
+  transform: translateX(-20px);
+}
+.fade-in.from-right {
+  transform: translateX(20px);
+}
+
+.active .fade-in {
+  opacity: 1;
+}
+.active .fade-in.from-top {
+  transform: translateY(0);
+}
+.active .fade-in.from-bottom {
+  transform: translateY(0);
+}
+.active .fade-in.from-left {
+  transform: translateX(0);
+}
+.active .fade-in.from-right {
+  transform: translateX(0);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+}
+
+.outer-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.outer-container #main-carousel {
+  max-width: none;
+  max-height: none;
+}
+.outer-container #main-carousel img.slide-bg {
+  object-fit: inherit !important;
+}
+.outer-container .carousel, .outer-container .carousel-inner {
+  overflow: hidden;
+  position: relative;
+}
+.outer-container .carousel .carousel-item, .outer-container .carousel-inner .carousel-item {
+  overflow: hidden;
+  padding: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.outer-container .carousel .carousel-item img.slide-bg, .outer-container .carousel-inner .carousel-item img.slide-bg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.outer-container .carousel .carousel-control-next, .outer-container .carousel .carousel-control-prev, .outer-container .carousel-inner .carousel-control-next, .outer-container .carousel-inner .carousel-control-prev {
+  height: 100%;
+  opacity: 0;
+}
+.outer-container .carousel .carousel-control-next:focus, .outer-container .carousel .carousel-control-prev:focus, .outer-container .carousel-inner .carousel-control-next:focus, .outer-container .carousel-inner .carousel-control-prev:focus {
+  opacity: 0;
+}
+.outer-container .carousel .carousel-control-next:hover, .outer-container .carousel .carousel-control-prev:hover, .outer-container .carousel-inner .carousel-control-next:hover, .outer-container .carousel-inner .carousel-control-prev:hover {
+  opacity: 0.5;
+}
+.outer-container .carousel .carousel-control-prev, .outer-container .carousel-inner .carousel-control-prev {
+  background: linear-gradient(to right, #00000080 0%, transparent 100%);
+}
+.outer-container .carousel .carousel-control-next, .outer-container .carousel-inner .carousel-control-next {
+  background: linear-gradient(to left, #00000080 0%, transparent 100%);
+}
+.outer-container .carousel .carousel-indicators, .outer-container .carousel-inner .carousel-indicators {
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+.outer-container .carousel .carousel-indicators li, .outer-container .carousel-inner .carousel-indicators li {
+  width: 60px;
+  height: 7px;
+  margin-right: 5px;
+  margin-left: 5px;
+  opacity: 0.4;
+  text-indent: initial;
+  z-index: 10;
+}
+.outer-container .carousel .carousel-indicators li.active, .outer-container .carousel-inner .carousel-indicators li.active {
+  opacity: 1;
+}
+.outer-container .carousel .carousel-indicators li:hover span, .outer-container .carousel-inner .carousel-indicators li:hover span {
+  opacity: 1;
+  width: 200px;
+}
+.outer-container .carousel .carousel-indicators li span, .outer-container .carousel-inner .carousel-indicators li span {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 1.5rem;
+}
+@media (min-width: 1366px) {
+  .outer-container .carousel .carousel-indicators li span, .outer-container .carousel-inner .carousel-indicators li span {
+    font-size: 1.3rem;
+  }
+}
+.outer-container .carousel .indicators-bg, .outer-container .carousel-inner .indicators-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7.5rem;
+  background-color: #000000aa;
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.outer-container .carousel .content, .outer-container .carousel .content-link, .outer-container .carousel-inner .content, .outer-container .carousel-inner .content-link {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 100;
+}
+
+.content h1 {
+  font-size: 5.3125rem;
+}
+.content h2 {
+  font-size: 4.375rem;
+}
+.content h3 {
+  font-size: 4.0625rem;
+}
+.content h4 {
+  font-size: 3.4375rem;
+}
+.content h5 {
+  font-size: 2.8125rem;
+}
+.content h6, .content p, .content span {
+  font-size: 2.1875rem;
+}
+.content small {
+  font-size: 1.125rem;
+}
+
+.content, .content-link {
+  color: white;
+}
+
+#slide1 .content {
+  top: 29%;
+  right: 10%;
+  width: 43%;
+  height: 41%;
+}
+
+#slide2 .content, #slide3 .content, #slide4 .content, #slide5 .content {
+  top: 29%;
+  right: 10%;
+  width: 43%;
+  height: 41%;
+}
+
+#slide18 #farm-link {
+  width: 24%;
+  height: 7%;
+  bottom: 12%;
+  left: 13%;
+}
+
+#slide20 .content {
+  top: 29%;
+  right: 10%;
+  width: 43%;
+  height: 41%;
+}
+#slide20 #moon-link {
+  width: 38%;
+  height: 10%;
+  bottom: 48%;
+  left: 8%;
+}
+#slide20 #email-link {
+  width: 21%;
+  height: 10%;
+  bottom: 9%;
+  left: 8%;
+}
+
+/*# sourceMappingURL=styles.css.map */
